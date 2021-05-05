@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" name="name" matInput placeholder="Ex. pat@example.com" [(ngModel)]="login.name" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Senha</mat-label>
+    <input type="password" name="quantity" matInput placeholder="Ex. 5000" [(ngModel)]="login.password" />
+  </mat-form-field>
+  <a [routerLink]="['/page/user/new-user']"> Não possuo cadastro</a>
+  <button class="btn-default">Login</button>
+</form>

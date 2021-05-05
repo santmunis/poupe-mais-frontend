@@ -1,0 +1,16 @@
+.main-pages{
+    display: flex;
+
+    .left, .rigth{
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left{
+        background-color: var(--secundary-color);
+    }
+}
+

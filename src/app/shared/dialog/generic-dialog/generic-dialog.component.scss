@@ -1,0 +1,13 @@
+:host {
+    display: inline-block;
+    width: 100%;
+  }
+  .dialog-paragraph {
+    margin: 0;
+    font-family: var(font-family);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color:var(--primary-color);
+  }

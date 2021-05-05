@@ -1,0 +1,13 @@
+.main-pages{
+    display: inline-flex;
+
+    div{
+        width: 50%;
+    }
+
+    .right > div{
+        height: 50vh;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

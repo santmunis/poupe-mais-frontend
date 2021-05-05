@@ -1,0 +1,22 @@
+<div class="content">
+  <div class="user">
+    <img src="https://www.hypeness.com.br/1/2020/07/EDIT_Van-gogh.jpg" alt="Imagem de perfil" />
+    <p>Olá, Ruanzoca</p>
+  </div>
+  <div class="menu-content">
+    <div [routerLink]="['/home']" routerLinkActive="router-link-active"
+      [ngClass]="{'menu-item': true, 'selected': true}">
+      <p>Dashbord</p>
+    </div>
+    <div [routerLink]="['/objective']" routerLinkActive="router-link-active"
+      [ngClass]="{'menu-item': true, 'selected': false}">
+      <p>Objetivos</p>
+    </div>
+    <!-- <div [ngClass]="{'menu-item': true, 'selected': false }">
+      <p>Finanças</p>
+    </div> -->
+  </div>
+  <div>
+    <p>Sair</p>
+  </div>
+</div>

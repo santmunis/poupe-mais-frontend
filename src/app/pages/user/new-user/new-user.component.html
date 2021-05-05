@@ -1,0 +1,24 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome</mat-label>
+    <input type="text" name="name" matInput placeholder="Ex. pat@example.com" [(ngModel)]="user.name" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Ultimo Nome</mat-label>
+    <input type="text" name="lastName" matInput placeholder="Ex. pat@example.com" [(ngModel)]="user.last_name" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" name="email" matInput placeholder="Ex. pat@example.com" [(ngModel)]="user.email" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Telefone</mat-label>
+    <input type="text" name="phone" matInput placeholder="Ex. pat@example.com" [(ngModel)]="user.phone" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Senha</mat-label>
+    <input type="password" name="password" matInput placeholder="Ex. 5000" [(ngModel)]="user.password" />
+  </mat-form-field>
+
+  <button class="btn-default">Cadastrar</button>
+</form>

@@ -1,0 +1,53 @@
+<div class="main">
+  <div class="title">
+    <h4>Ultimas transações</h4>
+    <mat-icon (click)="dispatchDialog()">add</mat-icon>
+  </div>
+  <div class="content">
+    <div *ngFor="let transaction of transactions">
+      <div class="content-item" [ngClass]="transaction.type === 'entrace' ? 'entrace' : 'whitedraw'">
+        <div>
+          <p>{{transaction.name}}</p>
+        </div>
+        <div>
+          <p>{{transaction.created_at}}</p>
+        </div>
+        <div>
+          <p>R$ {{transaction.value}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #addTransaction>
+  <ng-container>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input type="text" name="name" matInput placeholder="Ex. pat@example.com" [(ngModel)]="transaction.name" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descrição</mat-label>
+        <input type="text" name="description" matInput placeholder="Ex. 5000" [(ngModel)]="transaction.description" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Valor</mat-label>
+        <input type="text" name="value" matInput placeholder="Ex. 5000" [(ngModel)]="transaction.value" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <mat-select [(ngModel)]="transaction.type" name="type">
+          <mat-option value="ENTRACE">Entrada</mat-option>
+          <mat-option value="WITHDRAW">Saida</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button class="btn-default">Cadastrar Transação</button>
+    </form>
+  </ng-container>
+
+</ng-template>

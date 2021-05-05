@@ -1,0 +1,17 @@
+.main{
+    width: 389px;
+    padding: 30px 4.5em;
+    border-radius: 10px;
+    background-color: var(--secundary-color);
+}
+
+.content-value{
+    display: flex;
+    align-items: center;
+
+    .mat-icon{
+        color: green;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="main">
+  <div>
+    <h2 class="headers-title">Alocação de Recursos</h2>
+    <div *ngFor="let objective of objectives">
+      <p>{{objective.name}}</p>
+    </div>
+  </div>
+  <div class="div-button">
+    <button class="btn-default" (click)="dispatchDialog()
+    " type="button">CRIAR OBJETIVO</button>
+  </div>
+
+</div>
+
+<ng-template #createObjective>
+  <app-form-objective (submit)="closeAndUpdate($event)"></app-form-objective>
+</ng-template>

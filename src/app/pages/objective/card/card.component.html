@@ -1,0 +1,9 @@
+<div class="main">
+  <app-progress-bar [height]="8" [currentProgress]="progress" color="#3EDE18" [roundedBorder]="true"></app-progress-bar>
+  <h3>{{ name }}</h3>
+  <div class="content-value">
+    <strong>R$ {{value.toFixed(2)}}</strong>
+    <mat-icon (click)="addValue.emit('')">add</mat-icon>
+  </div>
+
+</div>

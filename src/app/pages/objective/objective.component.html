@@ -1,0 +1,24 @@
+<ng-container>
+  <div class="main-pages">
+    <div class="content-cards">
+      <ng-container *ngFor="let objective of objectives">
+        <app-card [name]="objective.name" [value]="objective.already_placed"
+          [progress]="(objective.already_placed * 100) / objective.quantity" (addValue)="dispatchDialog(objective)">
+        </app-card>
+      </ng-container>
+    </div>
+    <div>
+      <app-menu [objectives]="objectives"></app-menu>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #createObjective>
+  <form #form="ngForm" (ngSubmit)="closeAndUpdate(form)">
+    <mat-form-field class="example-full-width">
+      <mat-label>Valor</mat-label>
+      <input type="number" name="value" matInput placeholder="Ex. 5000" [(ngModel)]="objective.already_placed" />
+    </mat-form-field>
+    <button class="btn-default" type="submit">Salvar</button>
+  </form>
+</ng-template>

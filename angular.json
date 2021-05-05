@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "poupemais"
+    }
+  },
+  "defaultProject": "poupemais",
+  "cli": {
+    "analytics": "d24c0a38-3dc2-43a5-bae8-856beed827f7"
+  }
 }

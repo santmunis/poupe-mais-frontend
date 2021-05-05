@@ -1,0 +1,16 @@
+<ng-container>
+  <div class="main-pages">
+    <div>
+      <app-transaction [transactions]="transactions"></app-transaction>
+    </div>
+    <div class="right">
+      <div>
+        <app-chart [transactions]="transactions"></app-chart>
+      </div>
+      <div>
+        <app-monthly-expenses [transactions]="transactions"></app-monthly-expenses>
+      </div>
+
+    </div>
+  </div>
+</ng-container>

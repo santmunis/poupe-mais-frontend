@@ -1,0 +1,32 @@
+.user, .content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content{
+    height: 100vh;
+    background-color: var(--secundary-color);
+    padding: 25px 0px;
+    box-sizing: border-box;
+    width: 150px;
+    justify-content:space-between;
+    p{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .user {
+        img {
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+        }
+    }
+    .menu-item {
+        padding: 25px 0px;
+        box-sizing: border-box;
+    }
+}
+

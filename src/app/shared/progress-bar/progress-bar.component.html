@@ -1,0 +1,4 @@
+<div class="progress-bar" [ngClass]="{ 'rounded': roundedBorder }" [style.height.px]="height">
+  <div #CurrentProgress [ngStyle]="{ 'width.%':currentProgress, 'height.px':height, 'background-color':color }"
+    class="current"> </div>
+</div>

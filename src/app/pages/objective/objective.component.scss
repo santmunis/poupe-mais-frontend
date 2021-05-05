@@ -1,0 +1,19 @@
+.main-pages{
+    display: grid;
+    grid-template-columns: 1fr 590px;
+    grid-template-rows: 1fr;
+}
+
+.content-cards {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: max-content;
+   align-content: baseline;
+   grid-row-gap: 20px; 
+   justify-items: center;
+   padding: 22px;
+}
+
+form, .mat-form-field{
+    width: 100%;
+}

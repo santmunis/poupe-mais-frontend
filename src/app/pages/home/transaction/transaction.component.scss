@@ -1,0 +1,49 @@
+.main{
+    width: 94%;
+    height: 100%;
+    background-color: var(--secundary-color);
+    margin-left: 25px;
+    height: 100vh;
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        h4 {
+            padding: 10px 10px;
+        }
+
+        .mat-icon{
+            cursor: pointer;
+            color: var(--contrasct-color);
+        }
+    }
+}
+
+.content{
+    text-transform: uppercase;
+    .content-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+        
+        p{
+            font-weight: 400;
+            font-size: 14px;
+
+        }
+    }
+    .entrace{
+        border-left: solid 6px green;
+    }
+    .whitedraw {
+        border-left: solid 6px var(--red-color);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}

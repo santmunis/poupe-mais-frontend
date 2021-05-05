@@ -1,0 +1,7 @@
+<div class="main">
+  <h2 class="headers-title">Gastos Mensais</h2>
+  <ng-container *ngFor="let transaction of _transactions">
+    <app-card [title]="transaction.tag.name" [value]="transaction.value" [url]="transaction.tag.url"></app-card>
+  </ng-container>
+
+</div>
