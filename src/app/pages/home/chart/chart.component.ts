@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Chart, ChartType } from 'chart.js';
 import { Transaction } from '../transaction/Models/transaction.models';
-import { groupBy, clone, Dictionary, sumBy, isNil } from 'lodash';
+import { groupBy, clone, Dictionary, sumBy, isNil, has } from 'lodash';
 
 @Component({
   selector: 'app-chart',
@@ -64,15 +64,19 @@ export class ChartComponent implements OnInit {
 
     const sumValues = (data: Dictionary<Transaction[]>): number[] => {
       const numberArray: number[] = [];
-      for (const key in data) {
-        numberArray.push(sumBy(data[key], 'value'));
+      for (let i = 0; i < 12; i++) {
+        if (has(data, i)) {
+          numberArray.push(sumBy(data[i], 'value'));
+        } else {
+          numberArray.push(0);
+        }
       }
 
       return numberArray;
     };
 
-    const entraceArr: Transaction[] = filterFunction(transactions, 'entrace');
-    const withdrawArr: Transaction[] = filterFunction(transactions, 'withdraw');
+    const entraceArr: Transaction[] = filterFunction(transactions, 'ENTRANCE');
+    const withdrawArr: Transaction[] = filterFunction(transactions, 'WITHDRAW');
 
     const entranceGroup: Dictionary<Transaction[]> = DictionaryFunction(
       entraceArr
