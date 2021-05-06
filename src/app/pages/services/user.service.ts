@@ -22,17 +22,24 @@ export class UserService {
     });
   }
 
-  public getUser(): void {
-    this._http.get(`${environment.apiUrl}/users`).subscribe((response) => {
-      this.user = response as IUser;
-    });
+  public async getUser() {
+    await this._http
+      .get(`${environment.apiUrl}/users`)
+      .toPromise()
+      .then((response) => {
+        this.user = response as IUser;
+      });
   }
 
   public userIsPremium(): boolean {
     return (
       !isNil(this.user) &&
       !isNil(this.user.subscription) &&
-      this.user.subscription === 'true'
+      this.user.subscription.name === 'Premium'
     );
+  }
+
+  public getUserInformation(): IUser {
+    return this.user;
   }
 }

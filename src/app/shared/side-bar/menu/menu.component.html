@@ -1,7 +1,7 @@
 <div class="content">
   <div class="user">
     <img src="https://www.hypeness.com.br/1/2020/07/EDIT_Van-gogh.jpg" alt="Imagem de perfil" />
-    <p>Olá, Ruanzoca</p>
+    <p>Olá, {{this.user?.name}}</p>
   </div>
   <div class="menu-content">
     <div [routerLink]="['/home']" routerLinkActive="router-link-active"
@@ -17,6 +17,6 @@
     </div> -->
   </div>
   <div>
-    <p>Sair</p>
+    <p (click)="logout()">Sair</p>
   </div>
 </div>
